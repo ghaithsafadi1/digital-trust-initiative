@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  Shield,
   Target,
   Users,
   Sparkles,
@@ -13,10 +12,12 @@ import {
   Mail,
   Menu,
   X,
+  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import sdtLogo from "@/assets/sdt-logo.png";
 
 const Index = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -206,12 +207,9 @@ const Index = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-3"
             >
-              <Shield className="h-8 w-8 text-accent" />
-              <span className="text-xl font-bold text-foreground">
-                Syria Digital Trust
-              </span>
+              <img src={sdtLogo} alt="Syria Digital Trust Logo" className="h-12 w-auto" />
             </motion.div>
 
             {/* Desktop Menu */}
@@ -277,9 +275,9 @@ const Index = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-block mb-6"
+              className="inline-block mb-8"
             >
-              <Shield className="h-20 w-20 text-accent animate-glow" />
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-32 w-auto mx-auto drop-shadow-2xl" />
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -659,11 +657,8 @@ const Index = () => {
       <footer className="bg-background border-t border-border py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Shield className="h-6 w-6 text-accent" />
-              <span className="text-lg font-bold text-foreground">
-                Syria Digital Trust
-              </span>
+            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-10 w-auto" />
             </div>
 
             <div className="flex items-center space-x-6 text-muted-foreground">
