@@ -13,6 +13,8 @@ import {
   Menu,
   X,
   Shield,
+  Facebook,
+  Linkedin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -209,7 +211,7 @@ const Index = () => {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
             >
-              <img src={sdtLogo} alt="Syria Digital Trust Logo" className="h-12 w-auto" />
+              <img src={sdtLogo} alt="Syria Digital Trust Logo" className="h-12 w-auto" loading="eager" />
             </motion.div>
 
             {/* Desktop Menu */}
@@ -277,7 +279,7 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-block mb-8"
             >
-              <img src={sdtLogo} alt="Syria Digital Trust" className="h-32 w-auto mx-auto drop-shadow-2xl" />
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-32 w-auto mx-auto drop-shadow-2xl" loading="eager" />
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -656,19 +658,39 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-background border-t border-border py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img src={sdtLogo} alt="Syria Digital Trust" className="h-10 w-auto" />
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center space-x-3">
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-10 w-auto" loading="lazy" />
             </div>
 
-            <div className="flex items-center space-x-6 text-muted-foreground">
+            <div className="flex flex-col md:flex-row items-center gap-6 text-muted-foreground">
               <a
                 href="mailto:info@syriadigitaltrust.org"
                 className="hover:text-accent transition-colors flex items-center space-x-2"
               >
                 <Mail className="h-4 w-4" />
-                <span>info@syriadigitaltrust.org</span>
+                <span className="text-sm">info@syriadigitaltrust.org</span>
               </a>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.facebook.com/share/17Yk2b8PZt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/syria-digital-trust/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
 
