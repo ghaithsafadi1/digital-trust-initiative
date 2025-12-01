@@ -679,12 +679,12 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-lg p-10 flex items-center justify-center hover:shadow-lg transition-shadow"
             >
               <img 
                 src={ciscoNetacademy} 
                 alt="Cisco Networking Academy" 
-                className="h-20 w-auto object-contain"
+                className="h-32 w-auto object-contain filter brightness-100"
                 loading="lazy"
               />
             </motion.div>
