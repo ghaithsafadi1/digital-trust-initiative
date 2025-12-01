@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import sdtLogo from "@/assets/sdt-logo.png";
+import ciscoPartnership from "@/assets/cisco-partnership.png";
 
 const Index = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -220,7 +221,7 @@ const Index = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-foreground hover:text-accent transition-colors font-medium"
+                  className="text-foreground/90 hover:text-accent transition-colors font-medium"
                 >
                   {link.label}
                 </button>
@@ -279,7 +280,7 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-block mb-8"
             >
-              <img src={sdtLogo} alt="Syria Digital Trust" className="h-32 w-auto mx-auto drop-shadow-2xl" loading="eager" />
+              <img src={ciscoPartnership} alt="Syria Digital Trust & Cisco Networking Academy Partnership" className="h-40 w-auto mx-auto drop-shadow-2xl" loading="eager" />
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
