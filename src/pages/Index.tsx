@@ -21,6 +21,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import sdtLogo from "@/assets/sdt-logo.png";
 import ciscoPartnership from "@/assets/cisco-partnership.png";
+import ciscoNetacademy from "@/assets/cisco-netacademy.png";
 
 const Index = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -280,7 +281,7 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-block mb-8"
             >
-              <img src={ciscoPartnership} alt="Syria Digital Trust & Cisco Networking Academy Partnership" className="h-40 w-auto mx-auto drop-shadow-2xl" loading="eager" />
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-32 w-auto mx-auto drop-shadow-2xl" loading="eager" />
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -653,6 +654,67 @@ const Index = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Partners</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Collaborating with leading organizations to amplify our impact
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center hover:shadow-lg transition-shadow"
+            >
+              <img 
+                src={ciscoNetacademy} 
+                alt="Cisco Networking Academy" 
+                className="h-20 w-auto object-contain"
+                loading="lazy"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center hover:shadow-lg transition-shadow"
+            >
+              <div className="text-center">
+                <Building2 className="w-16 h-16 mx-auto mb-2 text-muted-foreground" />
+                <p className="text-sm text-muted-foreground">Partner Coming Soon</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center hover:shadow-lg transition-shadow"
+            >
+              <div className="text-center">
+                <Building2 className="w-16 h-16 mx-auto mb-2 text-muted-foreground" />
+                <p className="text-sm text-muted-foreground">Partner Coming Soon</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
