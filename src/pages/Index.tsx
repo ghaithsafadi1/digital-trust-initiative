@@ -214,7 +214,7 @@ const Index = () => {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
             >
-              <img src={sdtLogo} alt="Syria Digital Trust Logo" className="h-12 w-auto" loading="eager" />
+              <img src={sdtLogo} alt="Syria Digital Trust Logo" className="h-10 sm:h-12 w-auto" loading="eager" />
             </motion.div>
 
             {/* Desktop Menu */}
@@ -282,16 +282,16 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-block mb-8"
             >
-              <img src={sdtLogo} alt="Syria Digital Trust" className="h-32 w-auto mx-auto drop-shadow-2xl" loading="eager" />
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-24 sm:h-28 md:h-32 w-auto mx-auto drop-shadow-2xl" loading="eager" />
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4">
               Securing Syria's
               <br />
               <span className="text-accent">Digital Future</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
               A non-political, volunteer-based international non-profit
               dedicated to empowering Syrians with cybersecurity knowledge,
               skills, and opportunities to protect and rebuild their digital
@@ -305,13 +305,13 @@ const Index = () => {
             >
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300"
+                className="bg-accent hover:bg-accent/90 text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300"
                 onClick={() =>
                   (window.location.href = "mailto:info@syriadigitaltrust.org")
                 }
               >
                 Get Involved
-                <Mail className="ml-2 h-5 w-5" />
+                <Mail className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </motion.div>
           </motion.div>
@@ -329,19 +329,19 @@ const Index = () => {
             className="grid md:grid-cols-2 gap-12"
           >
             <motion.div variants={fadeIn}>
-              <h2 className="text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
                 To build a secure, resilient, and inclusive digital ecosystem in
                 Syria by providing cybersecurity education, fostering talent, and
                 supporting institutions in protecting their digital assets.
               </p>
 
-              <h2 className="text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                 Our Vision
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 A Syria where every citizen, organization, and institution has the
                 knowledge and tools to thrive safely in the digital age,
                 contributing to a prosperous and secure society.
@@ -349,7 +349,7 @@ const Index = () => {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <h3 className="text-3xl font-bold text-foreground mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8">
                 Our Values
               </h3>
               <div className="space-y-6">
@@ -362,10 +362,10 @@ const Index = () => {
                     transition={{ delay: index * 0.1 }}
                     className="border-l-4 border-accent pl-4"
                   >
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
+                    <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                       {value.title}
                     </h4>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{value.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -383,10 +383,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Why Now?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               The digital landscape in Syria presents urgent challenges and
               unique opportunities
             </p>
@@ -397,7 +397,7 @@ const Index = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {whyNow.map((item, index) => (
               <motion.div key={item.title} variants={fadeIn}>
@@ -406,10 +406,10 @@ const Index = () => {
                     <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                       <item.icon className="h-8 w-8 text-accent" />
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
                   </CardContent>
@@ -429,10 +429,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Strategic Objectives
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Three interconnected pillars guiding our work
             </p>
           </motion.div>
@@ -442,7 +442,7 @@ const Index = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {objectives.map((objective, index) => (
               <motion.div
@@ -455,10 +455,10 @@ const Index = () => {
                     <div className="bg-accent text-white w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                       <objective.icon className="h-8 w-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                       {objective.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {objective.description}
                     </p>
                   </CardContent>
@@ -478,10 +478,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Flagship Programs
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Comprehensive initiatives addressing Syria's cybersecurity needs
             </p>
           </motion.div>
@@ -491,16 +491,16 @@ const Index = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
           >
             {programs.map((program, index) => (
               <motion.div key={program.title} variants={fadeIn}>
                 <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-accent">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                       {program.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {program.description}
                     </p>
                   </CardContent>
@@ -520,10 +520,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Who We Serve
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Building a diverse, inclusive cybersecurity community
             </p>
           </motion.div>
@@ -533,7 +533,7 @@ const Index = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-5 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6"
           >
             {demographics.map((demo, index) => (
               <motion.div key={demo.title} variants={fadeIn}>
@@ -565,8 +565,8 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-4">Our Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 sm:mb-4">Our Team</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Dedicated volunteers committed to Syria's digital security
             </p>
           </motion.div>
@@ -576,7 +576,7 @@ const Index = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8"
           >
             {team.map((member, index) => (
               <motion.div
@@ -605,8 +605,8 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">Join Our Mission</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Join Our Mission</h2>
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto px-4">
               Together, we can build a secure digital future for Syria
             </p>
           </motion.div>
@@ -616,7 +616,7 @@ const Index = () => {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto"
           >
             {[
               {
@@ -638,8 +638,8 @@ const Index = () => {
               <motion.div key={item.title} variants={fadeIn}>
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 h-full">
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-white/80 mb-6">{item.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{item.title}</h3>
+                    <p className="text-sm sm:text-base text-white/80 mb-4 sm:mb-6">{item.description}</p>
                     <Button
                       variant="outline"
                       className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
@@ -668,24 +668,24 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Partners</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">Our Partners</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Collaborating with leading organizations to amplify our impact
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-lg p-10 flex items-center justify-center hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-lg p-6 sm:p-8 md:p-10 flex items-center justify-center hover:shadow-lg transition-shadow"
             >
               <img 
                 src={ciscoNetacademy} 
                 alt="Cisco Networking Academy" 
-                className="h-32 w-auto object-contain filter brightness-100"
+                className="h-24 sm:h-28 md:h-32 w-auto object-contain filter brightness-100"
                 loading="lazy"
               />
             </motion.div>
@@ -695,7 +695,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-lg p-6 sm:p-8 md:p-10 flex items-center justify-center hover:shadow-lg transition-shadow"
             >
               <div className="text-center">
                 <Building2 className="w-16 h-16 mx-auto mb-2 text-muted-foreground" />
@@ -708,7 +708,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-lg p-8 flex items-center justify-center hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-lg p-6 sm:p-8 md:p-10 flex items-center justify-center hover:shadow-lg transition-shadow"
             >
               <div className="text-center">
                 <Building2 className="w-16 h-16 mx-auto mb-2 text-muted-foreground" />
@@ -724,7 +724,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center space-x-3">
-              <img src={sdtLogo} alt="Syria Digital Trust" className="h-10 w-auto" loading="lazy" />
+              <img src={sdtLogo} alt="Syria Digital Trust" className="h-8 sm:h-10 w-auto" loading="lazy" />
             </div>
 
             <div className="flex flex-col md:flex-row items-center gap-6 text-muted-foreground">
@@ -733,7 +733,7 @@ const Index = () => {
                 className="hover:text-accent transition-colors flex items-center space-x-2"
               >
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">info@syriadigitaltrust.org</span>
+                <span className="text-xs sm:text-sm break-all">info@syriadigitaltrust.org</span>
               </a>
               <div className="flex items-center gap-4">
                 <a
@@ -758,12 +758,12 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-            <p>
-              © {new Date().getFullYear()} Syria Digital Trust. All rights
-              reserved.
-            </p>
-          </div>
+           <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-border text-center text-muted-foreground">
+             <p className="text-xs sm:text-sm">
+               © {new Date().getFullYear()} Syria Digital Trust. All rights
+               reserved.
+             </p>
+           </div>
         </div>
       </footer>
     </div>
