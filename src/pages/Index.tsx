@@ -223,7 +223,7 @@ const Index = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-foreground/90 hover:text-accent transition-colors font-medium"
+                  className="text-nav-link hover:text-nav-link/70 transition-colors font-semibold"
                 >
                   {link.label}
                 </button>
@@ -257,7 +257,7 @@ const Index = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block w-full text-left px-4 py-2 text-foreground hover:bg-accent/10 rounded-md transition-colors"
+                  className="block w-full text-left px-4 py-2 text-nav-link font-semibold hover:bg-accent/10 rounded-md transition-colors"
                 >
                   {link.label}
                 </button>
