@@ -4,11 +4,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// --- FIX APPLIED HERE ---
-// Set the base path to the exact repository name, enclosed in slashes.
+// Use base path only for production (GitHub Pages)
 export default defineConfig(({ mode }) => ({
-  base: "/digital-trust-initiative/",
-  // -------------------------
+  base: mode === "production" ? "/digital-trust-initiative/" : "/",
   server: {
     host: "::",
     port: 8080,
