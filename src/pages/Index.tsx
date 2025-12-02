@@ -175,12 +175,13 @@ const Index = () => {
   ];
 
   const team = [
-    { initials: "RK", name: "Raed Khoury" },
-    { initials: "YH", name: "Yara Hassan" },
-    { initials: "ART", name: "Ahmad Al-Tamimi" },
-    { initials: "LM", name: "Lina Mansour" },
-    { initials: "OS", name: "Omar Saleh" },
-    { initials: "NS", name: "Nour Sabbagh" },
+    { initials: "RK", name: "Rayad Kubaisi" },
+    { initials: "YH", name: "Yaman Hakimi" },
+    { initials: "ART", name: "Abdul Rahman Trad" },
+    { initials: "MAB", name: "Mohammad Al Bahra" },
+    { initials: "EE", name: "Eyad Eriksousi" },
+    { initials: "MG", name: "Moaz Ghawji" },
+    { initials: "MAS", name: "Majd Al Shawa" },
   ];
 
   const fadeIn = {
